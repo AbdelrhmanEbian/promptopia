@@ -8,8 +8,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        satoshi: ['Satoshi', 'sans-serif'],
-        inter: ['Inter', 'sans-serif'],
+        satoshi: ['sans-serif'],
+        inter: ['sans-serif'],
       },
       colors: {
         'primary-orange': '#FF5722',
