@@ -11,7 +11,8 @@ const RootLayout = ({ children }) => {
   return (
     <html lang="en">
       <Head>
-        <link rel="icon" type="image/svg+xml" href="/assets/assets/images/logo.svg"  />
+        {/* <link rel="icon" href="/assets/assets/images/favicon.ico" /> */}
+        {/* Other meta tags and headers can be added here */}
       </Head>
       <body>
         <Provider>
