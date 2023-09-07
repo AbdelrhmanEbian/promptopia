@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import {useRouter} from "next/navigation";
-import { signOut, signIn, getProviders, useSession } from "next-auth/react";
+import { signOut, signIn, useSession } from "next-auth/react";
 import { useState , useEffect} from "react";
 const Nav = () => {
   const {data:session} = useSession()
@@ -10,6 +10,7 @@ const Nav = () => {
   const [providers, setProviders] = useState(null);
   useEffect(() => {
     const getProvider = async () => {
+      const getProviders = (await import('next-auth/react')).getProviders
       const response = await getProviders();
       setProviders(response);
     };

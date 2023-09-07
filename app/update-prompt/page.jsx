@@ -3,6 +3,8 @@ import Form from "@components/Form";
 import { useSession } from "next-auth/react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
+import dynamic  from "next/dynamic"
+const dynamicForm = dynamic(() => import("@components/Form"), { ssr: false });
 const CreatePost = () => {
   const [post, setPost] = useState({
     prompt: "",
@@ -48,7 +50,7 @@ const CreatePost = () => {
     }
   };
   return (
-    <Form
+    <dynamicForm
       post={post}
       type="edit"
       setPost={setPost}
