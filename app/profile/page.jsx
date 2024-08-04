@@ -3,7 +3,7 @@ import { useState , useEffect } from "react"
 import { useSession } from "next-auth/react"
 import { useRouter } from "next/navigation"
 import dynamic  from "next/dynamic"
-const dynamicProfile = dynamic(() => import("@components/Profile"), { ssr: false });
+const DynamicProfile = dynamic(() => import("@components/Profile"), { ssr: false });
 const MyProfile = () => {
   
     const handleDelete = async(post) => {
@@ -34,7 +34,7 @@ const MyProfile = () => {
         if(session?.user)fetchPosts()
       }, [session])
   return (
-    <dynamicProfile
+    <DynamicProfile
     name="My"
     data={posts}
     handleEdit={handleEdit}

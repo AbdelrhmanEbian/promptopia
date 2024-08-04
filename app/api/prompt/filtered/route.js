@@ -3,6 +3,7 @@ import { connectDB } from "@utils/db"
 
 export const POST = async (req, res) => {
     const { text } = await req.json()
+    console.log('in')
     try {
         let posts;
         if (text.length !== 0) {
