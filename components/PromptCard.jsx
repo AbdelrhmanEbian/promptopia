@@ -47,6 +47,7 @@ const PromptCard = ({ post, handleTagClick , handleEdit , handleDelete , setSear
             <Image
             src={copied === post.prompt? '/assets/assets/icons/tick.svg':"/assets/assets/icons/copy.svg"}
             height={16}
+            alt="copy image"
             width={16}
             className=" cursor-pointer"
             />

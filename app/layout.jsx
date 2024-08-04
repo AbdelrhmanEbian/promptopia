@@ -2,7 +2,6 @@ import "@styles/global.css";
 export const metadata = {
   title: "promptopia",
   description: "promptopia is a platform for promotions",
-  
 };
 import Provider from "@components/Provider";
 import Nav from "@components/Nav";
